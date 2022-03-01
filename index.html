@@ -4,27 +4,291 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<script src="script.js" type="text/javascript"></script>
 		<title>Island Boy</title>
 	</head>
 	<body>
 		<header>
-			<div class="container">
+			<div class="container ff-poppins">
 				<div class="flex">
 					<div class="logo" style="flex: 1">
 						<img src="img/logo.png" alt="Island Boy Logo" />
 					</div>
 					<ul class="navigation flex justify-content-center" style="flex: 1">
 						<li class="navigation-item">
-							<a href="#" class="active">Home</a>
+							<a href="#" class="active fs-400">Home</a>
 						</li>
-						<li class="navigation-item"><a href="#">Services</a></li>
-						<li class="navigation-item"><a href="#">Work</a></li>
+						<li class="navigation-item fs-400"><a href="#">Services</a></li>
+						<li class="navigation-item fs-400"><a href="#">Work</a></li>
 					</ul>
 					<div style="flex: 1"></div>
 				</div>
 			</div>
 		</header>
+		<!-- Main banner section -->
+
+		<div class="main-banner-section ff-montserat">
+			<div class="bg-overlay">
+				<div class="container h-100">
+					<div class="flex justify-content-center align-items-center h-100">
+						<div class="content-box text-center">
+							<h1 class="text-uppercase fs-900">Treat your boat right</h1>
+							<p class="main-subheading fs-600 letter-spacing-2">
+								I will bring the smile back
+							</p>
+							<a href="#" class="large-button text-uppercase">Contact me</a>
+						</div>
+					</div>
+				</div>
+				<div class="next"></div>
+				<div class="prev"></div>
+			</div>
+			<div class="social flex flex-column">
+				<i class="fa-brands fa-facebook-f"></i>
+				<i class="fa-brands fa-instagram"></i>
+				<i class="fa-brands fa-twitter"></i>
+			</div>
+			<div class="navigation-squares flex flex-column">
+				<div class="square active"></div>
+				<div class="square"></div>
+				<div class="square"></div>
+			</div>
+		</div>
+
+		<!-- services section -->
+		<div class="services text-center ff-poppins">
+			<h2 class="text-uppercase fs-800 section-heading text-dark">
+				welcome to <span class="subheading-blue"> island boy </span>refinishing
+			</h2>
+			<p class="fs-100 text-center">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nibh
+				faucibus, mattis elit ut
+			</p>
+			<div class="container">
+				<div class="flex flex-wrap" style="gap: 2.5rem">
+					<div class="card" style="flex: 1">
+						<div class="card-image">
+							<img src="img/night-sight.jpg" alt="Boats on marina" />
+						</div>
+						<div class="card-content">
+							<h3 class="fs-700 text-dark">Yacht Refinishing</h3>
+							<p class="fs-200">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+								architecto earum ea harum itaque. Labore obcaecati dolor id
+								possimus iure.
+							</p>
+						</div>
+					</div>
+					<div class="card" style="flex: 1">
+						<div class="card-image">
+							<img src="img/marina-bay.jpg" alt="Boats on marina" />
+						</div>
+						<div class="card-content">
+							<h3 class="fs-700 text-dark">Yacht Refinishing</h3>
+							<p class="fs-200">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+								architecto earum ea harum itaque. Labore obcaecati dolor id
+								possimus iure.
+							</p>
+						</div>
+					</div>
+					<div class="card" style="flex: 1">
+						<div class="card-image">
+							<img src="img/interior.jpg" alt="Boats on marina" />
+						</div>
+
+						<div class="card-content">
+							<h3 class="fs-700 text-dark">Yacht Refinishing</h3>
+							<p class="fs-200">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+								architecto earum ea harum itaque. Labore obcaecati dolor id
+								possimus iure.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- gallery section -->
+
+		<section class="section gallery ff-poppins">
+			<h2 class="text-uppercase fs-800 section-heading text-center text-dark">
+				Gallery of my<span class="subheading-blue"> work </span>
+			</h2>
+			<p class="fs-100 text-center">Check out my most recent work</p>
+
+			<div class="container text-center">
+				<div class="grid gallery-wrapper">
+					<a class="img-link">
+						<img src="img/boat-side.jpg" alt="Boat night vision" />
+					</a>
+					<a class="img-link">
+						<img src="img/interior.jpg" alt="Boat night vision" />
+					</a>
+					<a class="img-link">
+						<img src="img/night-sight.jpg" alt="Boat night vision" />
+					</a>
+					<a class="img-link">
+						<img src="img/montenegro-bay.jpg" alt="Boat night vision" />
+					</a>
+					<a class="img-link">
+						<img src="img/marina-bay.jpg" alt="Boat night vision" />
+					</a>
+					<a class="img-link">
+						<img src="img/sunset.jpg" alt="Boat night vision" />
+					</a>
+				</div>
+				<a href="#" class="portfolio-btn text-center">Portfolio</a>
+			</div>
+		</section>
+
+		<!-- make your boat shine again -->
+
+		<section class="make-your-boat ff-poppins">
+			<div class="bg-overlay">
+				<div class="flex justify-content-center align-items-center h-100">
+					<div class="make-your-boat__heading text-center">
+						<h2 class="text-uppercase">Make your boat shine again</h2>
+						<a href="#" class="large-button text-uppercase">Contact me</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- testimonials -->
+
+		<div class="section section-testimonials ff-poppins">
+			<h2 class="text-uppercase fs-800 section-heading text-center text-dark">
+				what <span class="subheading-blue"> customers </span>say
+			</h2>
+			<p class="fs-100 text-center">Check out my most recent work</p>
+			<div
+				class="container testimonials-container flex align-items-center flex-wrap"
+			>
+				<div class="testimonial-card">
+					<div class="test-card-content-wrapper">
+						<div class="testimonial-card-heading flex align-items-center">
+							<img src="img/13.jpg" alt="Lady profile picture" />
+							<h4>John</h4>
+						</div>
+						<div class="testimonial-card-body">
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Asperiores quasi est voluptates, ut in cupiditate cumque dolor
+								voluptatum facilis ab!
+							</p>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Asperiores quasi est voluptates, ut in cupiditate cumque dolor
+								voluptatum facilis ab!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="testimonial-card active">
+					<div class="test-card-content-wrapper active">
+						<div class="testimonial-card-heading flex align-items-center">
+							<img src="img/65.jpg" alt="Lady profile picture" />
+							<h4>Sarah</h4>
+						</div>
+						<div class="testimonial-card-body">
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Asperiores quasi est voluptates, ut in cupiditate cumque dolor
+								voluptatum facilis ab!
+							</p>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Asperiores quasi est voluptates, ut in cupiditate cumque dolor
+								voluptatum facilis ab!
+							</p>
+						</div>
+						<p class="card-footer"><em>June 2018</em></p>
+					</div>
+				</div>
+				<div class="testimonial-card">
+					<div class="test-card-content-wrapper">
+						<div class="testimonial-card-heading flex align-items-center">
+							<img src="img/26.jpg" alt="Lady profile picture" />
+							<h4>Rob</h4>
+						</div>
+						<div class="testimonial-card-body">
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Asperiores quasi est voluptates, ut in cupiditate cumque dolor
+								voluptatum facilis ab!
+							</p>
+							<p>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Asperiores quasi est voluptates, ut in cupiditate cumque dolor
+								voluptatum facilis ab!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-wrapper flex justify-content-between flex-wrap">
+					<div>
+						<div class="footer-logo">
+							<img src="img/logo.png" alt="Island Boy Logo" />
+						</div>
+						<div class="footer-contact">
+							<div class="footer-email flex align-items-center">
+								<i class="fa-solid fa-envelope"></i>
+								<p>islandboy@gmail.com</p>
+							</div>
+							<div class="footer-phone flex align-items-center">
+								<i class="fa-solid fa-phone"></i>
+								<p>+491 629 558 785</p>
+							</div>
+						</div>
+					</div>
+					<div class="footer-social">
+						<h4 class="text-uppercase">Follow</h4>
+						<i class="fa-brands fa-facebook-f"></i>
+						<i class="fa-brands fa-instagram"></i>
+						<i class="fa-brands fa-twitter"></i>
+					</div>
+					<div class="footer-gallery">
+						<h4 class="text-uppercase">Gallery</h4>
+						<div class="grid gallery-grid">
+							<a class="img-link">
+								<img src="img/sightseeing.jpg" alt="Boat night vision" />
+							</a>
+							<a class="img-link">
+								<img src="img/montenegro-bay.jpg" alt="" />
+							</a>
+							<a class="img-link">
+								<img src="img/boat-side.jpg" alt="Boat night vision" />
+							</a>
+							<a class="img-link">
+								<img src="img/night-sight.jpg" alt="" />
+							</a>
+							<a class="img-link">
+								<img src="img/interior.jpg" alt="" />
+							</a>
+							<a class="img-link">
+								<img src="img/sightseeing.jpg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

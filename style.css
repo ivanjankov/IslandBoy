@@ -14,11 +14,13 @@ html {
 	--blue-clr: hsl(207, 89%, 68%);
 	--dark-clr: hsl(218, 28%, 33%);
 	--grey-clr: hsl(217, 11%, 52%);
+	--light-grey-clr: hsl(0, 0%, 85%);
 	--light-clr: hsl(210, 22%, 96%);
 
 	/* Font-size */
-	--fs-900: clamp(2rem, 5vw + 1rem, 2.19rem);
+	--fs-900: clamp(3rem, 7vw + 1rem, 4rem);
 	--fs-800: 1.75rem;
+	--fs-700: 1.65rem;
 	--fs-600: 1.25rem;
 	--fs-500: 1.2rem;
 	--fs-400: 1.125rem;
@@ -108,17 +110,35 @@ picture {
 	margin-inline: auto;
 	padding-inline: 2em;
 }
+.grid {
+	display: grid;
+}
 
 .flex {
 	display: flex;
+}
+
+.flex-column {
+	flex-direction: column;
 }
 
 .flex-gap {
 	gap: var(--gap, 1em);
 }
 
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 .justify-content-center {
 	justify-content: center;
+}
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.align-items-center {
+	align-items: center;
 }
 
 .text-dark {
@@ -128,6 +148,10 @@ picture {
 	color: var(--grey-clr);
 }
 
+.h-100 {
+	height: 100%;
+}
+
 /* typography */
 
 .ff-poppins {
@@ -135,6 +159,13 @@ picture {
 }
 .ff-montserat {
 	font-family: var(--ff-montserat);
+}
+
+.text-dark {
+	color: var(--dark-clr);
+}
+.text-grey {
+	color: var(--grey-clr);
 }
 
 .letter-spacing-1 {
@@ -152,6 +183,9 @@ picture {
 }
 .fs-800 {
 	font-size: var(--fs-800);
+}
+.fs-700 {
+	font-size: var(--fs-700);
 }
 .fs-600 {
 	font-size: var(--fs-600);
@@ -177,12 +211,41 @@ picture {
 	line-height: 1.1;
 }
 
+.section-heading {
+	font-weight: 600;
+	letter-spacing: -1.1px;
+}
 .subheading-blue {
 	color: var(--blue-clr);
 }
 
 .text-center {
 	text-align: center;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+/* Components */
+
+.large-button {
+	font-size: var(--fs-500);
+	display: inline-block;
+	flex-basis: 10%;
+	padding: 0.55em 1.45em;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 2px;
+	background: linear-gradient(to left, var(--blue-clr) 50%, #fff 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+}
+
+.large-button:hover {
+	background-position: left;
+	color: var(--blue-clr);
 }
 
 /* STYLING ELEMENTS */
@@ -193,7 +256,7 @@ header {
 }
 
 .logo img {
-	max-height: 80px;
+	max-height: 60px;
 }
 
 .navigation {
@@ -204,7 +267,7 @@ header {
 
 .navigation-item {
 	position: relative;
-	padding: 0.55em 0.75em;
+	padding: 0.25em 0.75em;
 	margin-right: 1rem;
 }
 .navigation-item.active {
@@ -250,3 +313,369 @@ header {
 	transform: translateY(50%);
 	z-index: 2;
 }
+
+/* main banner section */
+
+.main-banner-section {
+	position: relative;
+	background: url('img/heading-bg.jpg');
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 760px;
+	color: #fff;
+}
+
+.content-box {
+	position: relative;
+}
+
+.content-box h1 {
+	font-weight: 600;
+}
+
+.content-box > p {
+	margin-top: 1rem;
+	font-weight: 500;
+}
+
+.content-box > a {
+	margin-top: 8rem;
+}
+
+.bg-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: hsl(0, 0%, 38%, 0.2);
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.prev,
+.next {
+	width: 50px;
+	height: 50px;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+}
+
+.next {
+	right: 10%;
+	transform: translateY(-50%);
+}
+.prev {
+	left: 10%;
+	transform: translateY(-50%);
+}
+.prev:hover,
+.next:hover {
+	color: #000;
+	background-color: #fff;
+}
+
+.prev:before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	content: '\f060';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.next:before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	content: '\f061';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.social {
+	position: absolute;
+	background-color: var(--blue-clr);
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.social > i {
+	cursor: pointer;
+	padding: 1.4rem 1rem;
+}
+.social > i:hover {
+	background-color: #fff;
+	color: var(--blue-clr);
+}
+
+.navigation-squares {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.navigation-squares > .square {
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	margin: 1rem auto;
+}
+
+.square.active {
+	outline: 1px solid #fff;
+	outline-offset: 3px;
+}
+
+/* services */
+
+.services {
+	padding: 4rem 0;
+}
+
+.services > h2 {
+	padding-bottom: 1rem;
+}
+
+.services > p {
+	margin-bottom: 4rem;
+	margin-inline: auto;
+	max-width: 50ch;
+}
+
+.card {
+	border: 1px solid var(--light-grey-clr);
+	padding-bottom: 2.2rem;
+}
+
+.card-content {
+	padding: 1rem;
+}
+
+.card-content > h3 {
+	padding: 1rem 0.75em;
+	font-weight: 600;
+}
+
+/* Gallery section */
+
+.gallery > .container {
+	margin-top: 4rem;
+}
+
+.gallery-wrapper {
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.img-link {
+	position: relative;
+	overflow: hidden;
+	transition: scale 0.5s ease;
+}
+.img-link > img {
+	scale: 1;
+	transition: scale 0.5s ease;
+	object-fit: cover;
+	height: 100%;
+}
+.img-link:hover > img {
+	scale: 1.1;
+	transition: scale 0.5s ease;
+}
+
+.searchicon {
+	position: absolute;
+	border: 1px solid #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 80%;
+	display: grid;
+	place-content: center;
+	place-items: center;
+	color: #fff;
+	transition: all 0.5s ease;
+}
+
+.gallery-wrapper > a {
+	cursor: pointer;
+}
+
+.gallery-wrapper img {
+	width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.portfolio-btn {
+	display: inline-block;
+	font-size: var(--fs-500);
+	font-weight: 600;
+	flex-basis: 10%;
+	border: 1px solid var(--blue-clr);
+	border-radius: 2px;
+	text-decoration: none;
+	color: var(--blue-clr);
+	margin: 2rem auto;
+	padding: 0.55rem 3.5rem;
+	background: linear-gradient(to left, #fff 50%, var(--blue-clr) 50%) right;
+	background-size: 200%;
+	transition: 0.5s ease-out;
+}
+
+.portfolio-btn:hover {
+	background-position: left;
+	color: #fff;
+}
+
+/* make your boat */
+
+.make-your-boat {
+	position: relative;
+	background: url('img/sightseeing.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 350px;
+	width: 100%;
+	margin: 2rem auto;
+}
+
+.make-your-baot > * {
+	background-color: hsl(0, 0%, 38%, 1) !important;
+}
+
+.make-your-boat__heading > h2 {
+	font-size: var(--fs-800);
+	font-weight: 600;
+	color: #fff;
+	letter-spacing: -1.1px;
+}
+
+.make-your-boat__heading > a {
+	margin-top: 2.5rem;
+}
+
+/* testimonials */
+
+.section-testimonials {
+	margin: 4rem auto;
+}
+
+.testimonials-container {
+	margin: 3rem auto;
+	gap: 2.2rem;
+}
+
+.testimonials-container > * {
+	flex: 1;
+}
+
+.testimonial-card {
+	background: url('img/testimonial-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.test-card-content-wrapper {
+	padding: 2rem 2.5rem;
+}
+.testimonial-card.active > .test-card-content-wrapper {
+	background: linear-gradient(
+		to top,
+		hsl(207, 89%, 68%, 0.4),
+		hsl(210, 22%, 96%, 0.4)
+	);
+	padding: 3.5rem 2.5rem;
+}
+
+.testimonial-card-body {
+	margin-top: 1rem;
+}
+
+.testimonial-card-body > * {
+	margin: 1.2rem auto;
+	font-size: var(--fs-200);
+	color: var(--dark-clr);
+}
+
+.testimonial-card-heading > img {
+	border-radius: 50%;
+	max-width: 80px;
+	max-height: 80px;
+	margin-right: 2rem;
+}
+.testimonial-card-heading > h4 {
+	font-size: var(--fs-500);
+}
+
+.card-footer {
+	font-size: var(--fs-100);
+	text-align: end;
+	margin-top: 2rem;
+}
+
+/* footer */
+
+.footer {
+	background-color: #414756;
+	padding: 5rem 0;
+	color: #fff;
+}
+
+.footer-wrapper {
+	margin: 2rem 0;
+}
+
+.footer-logo {
+	width: 50px;
+	height: auto;
+	margin-bottom: 2rem;
+}
+
+.footer-contact > * {
+	margin-top: 0.75rem;
+}
+
+.footer-contact i {
+	color: var(--blue-clr);
+	padding-right: 0.95rem;
+}
+
+.footer-social {
+	color: #fff;
+}
+
+.footer-social > h4,
+.footer-gallery > h4 {
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+.footer-social > i {
+	font-size: var(--fs-700);
+	padding: 0rem 2rem 0.5rem 0;
+	cursor: pointer;
+}
+
+.gallery-grid {
+	max-width: 300px;
+	grid-template-columns: repeat(3, minmax(80px, 1fr));
+	grid-template-rows: repeat(2, 60px);
+	gap: 0.55rem;
+	grid-auto-flow: column;
+}
+
+/* .gallery-grid > img {
+	object-fit: fill;
+	max-height: 100%;
+} */
