@@ -317,7 +317,7 @@ header {
 
 .main-banner-section {
 	position: relative;
-	background: url('img/heading-bg.jpg');
+	background: url('img/backgrounds/heading-bg.jpg');
 	background-position: center center;
 	background-size: cover;
 	width: 100%;

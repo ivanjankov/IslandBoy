@@ -38,7 +38,7 @@
 		</header>
 		<!-- Main banner section -->
 
-		<div class="main-banner-section ff-montserat">
+		<div id="main-banner-section" class="main-banner-section ff-montserat">
 			<div class="bg-overlay">
 				<div class="container h-100">
 					<div class="flex justify-content-center align-items-center h-100">
@@ -51,8 +51,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="next"></div>
-				<div class="prev"></div>
+				<div id="next" class="next"></div>
+				<div id="prev" class="prev"></div>
 			</div>
 			<div class="social flex flex-column">
 				<i class="fa-brands fa-facebook-f"></i>
@@ -290,6 +290,45 @@
 				</div>
 			</div>
 		</footer>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="jquery.backstretch.min.js"></script>
+		<script>
+			//initialize slideshow
+			$('.main-banner-section').backstretch(
+				[
+					{ url: 'img/backgrounds/heading-bg.jpg', fade: 1000 },
+					{ url: 'img/backgrounds/bg2.jpg', fade: 1000 },
+					{ url: 'img/backgrounds/bg3.jpg', fade: 1000 },
+				],
+				{ duration: 5000, transitions: 'fadeInOut' }
+			);
+
+			$('#next').click(() => {
+				$('.main-banner-section').backstretch('next');
+			});
+			$('#prev').click(() => {
+				$('.main-banner-section').backstretch('prev');
+				console.log($('.main-banner-section').data('backstretch').index);
+			});
+
+			$(window).on('backstretch.after', changActiveCircle);
+			function changActiveCircle() {
+				let index = $('.main-banner-section').data('backstretch').index;
+				$('.square').each(function (i) {
+					if ($(this).hasClass('active')) {
+						$(this).removeClass('active');
+					}
+					if (index == i) {
+						$(this).addClass('active');
+					}
+				});
+			}
+		</script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
 			AOS.init();

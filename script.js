@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+	let backgroundImageArr = [
+		'img/backgrounds/heading-bg.jpg',
+		'img/backgrounds/bg2.jpg',
+		'img/backgrounds/bg3.jpg',
+	];
 	let galleryImages = Array.from(document.querySelectorAll('.img-link'));
 
+	// gallery images scale and icon show effect
 	galleryImages.forEach((link) => {
 		link.addEventListener('mouseenter', showSearchIcon);
 		link.addEventListener('mouseleave', removeSearchIcon);
