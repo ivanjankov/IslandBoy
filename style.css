@@ -319,8 +319,8 @@ header {
 
 .burger-menu {
 	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	top: 0.5rem;
+	right: 0rem;
 	background: url('svg/menu-open.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
