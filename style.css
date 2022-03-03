@@ -629,7 +629,7 @@ header {
 
 .footer {
 	background-color: #414756;
-	padding: 5rem 0;
+	padding: 5rem 0 0 0;
 	color: #fff;
 }
 
@@ -675,6 +675,13 @@ header {
 	grid-template-rows: repeat(2, 60px);
 	gap: 0.55rem;
 	grid-auto-flow: column;
+}
+
+.rights-reserved {
+	background-color: hsl(217, 11%, 52%, 0.1);
+	padding-block: 1rem;
+	font-size: var(--fs-100);
+	font-style: italic;
 }
 
 /* .gallery-grid > img {
