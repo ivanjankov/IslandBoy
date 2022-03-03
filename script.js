@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-	let backgroundImageArr = [
-		'img/backgrounds/heading-bg.jpg',
-		'img/backgrounds/bg2.jpg',
-		'img/backgrounds/bg3.jpg',
-	];
 	let galleryImages = Array.from(document.querySelectorAll('.img-link'));
+	let navigation = document.querySelector('.navigation');
+	let burgerBtn = document.getElementById('burger');
 
 	// gallery images scale and icon show effect
 	galleryImages.forEach((link) => {
@@ -24,5 +21,22 @@ document.addEventListener('DOMContentLoaded', () => {
 	function removeSearchIcon(e) {
 		let childForDelete = e.target.children[1];
 		e.target.removeChild(childForDelete);
+	}
+
+	// hamburger menu
+
+	burgerBtn.addEventListener('click', toggleHamburgerMenu);
+
+	function toggleHamburgerMenu() {
+		let navAttr = navigation.getAttribute('data-hidden');
+		let btnAttr = burgerBtn.getAttribute('data-expanded');
+
+		if (navAttr == 'false' && btnAttr == 'false') {
+			navigation.setAttribute('data-hidden', 'true');
+			burgerBtn.setAttribute('data-expanded', 'true');
+		} else {
+			navigation.setAttribute('data-hidden', 'false');
+			burgerBtn.setAttribute('data-expanded', 'false');
+		}
 	}
 });

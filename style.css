@@ -313,6 +313,67 @@ header {
 	z-index: 2;
 }
 
+.nav-wrapper {
+	position: relative;
+}
+
+.burger-menu {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: url('svg/menu-open.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 40px;
+	aspect-ratio: 1;
+	border: 0;
+	cursor: pointer;
+	display: none;
+}
+.burger-menu > img {
+	width: 40px;
+	aspect-ratio: 1;
+}
+
+@media (max-width: 800px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+	}
+	.burger-menu {
+		display: block;
+	}
+
+	.navigation {
+		display: none;
+	}
+
+	.burger-menu[data-expanded='true'] {
+		background: url('svg/menu-close.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.navigation[data-hidden='true'] {
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.navigation-item {
+		margin-block: 0.5rem;
+	}
+
+	.navigation-item:before,
+	.navigation-item:after {
+		display: none;
+	}
+}
+
 /* main banner section */
 
 .main-banner-section {
